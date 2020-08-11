@@ -7,3 +7,7 @@ target
 *.class
 .DS_Store
 application.properties
+.vscode
+.bloop
+.metals
+
