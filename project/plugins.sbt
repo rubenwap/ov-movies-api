@@ -1,5 +1,4 @@
-scalaVersion := "2.12"
-sbtVersion := "1.0"
+
 resolvers += Resolver.sbtPluginRepo("releases")
 
 addSbtPlugin("com.heroku" % "sbt-heroku" % "2.1.4")

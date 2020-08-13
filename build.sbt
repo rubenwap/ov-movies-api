@@ -4,7 +4,6 @@ version := "0.1"
 sbtVersion := "1.0"
 scalaVersion := "2.12.2"
 
-enablePlugins(JavaAppPackaging)
 
 libraryDependencies ++= Seq("com.lihaoyi" %% "cask" % "0.2.9",
   "com.lihaoyi" %% "utest" % "0.7.4" % Test,
@@ -15,3 +14,5 @@ libraryDependencies ++= Seq("com.lihaoyi" %% "cask" % "0.2.9",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2",
   "com.typesafe" % "config" % "1.4.0")
 
+enablePlugins(JavaAppPackaging)
+enablePlugins(DockerPlugin)
