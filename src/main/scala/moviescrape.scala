@@ -13,7 +13,6 @@ object moviescrape extends cask.MainRoutes with LazyLogging {
       movie_time: String
   )
 
-  override def port: Int = 8081
   override def host: String = "0.0.0.0"
 
   val pgDataSource = new org.postgresql.ds.PGSimpleDataSource()
