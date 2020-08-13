@@ -1,10 +1,10 @@
-name := "api"
+name := "vosmovies_api"
 
 version := "0.1"
+sbtVersion := "1.0"
 
-scalaVersion := "2.13.3"
-
-libraryDependencies ++= Seq("com.lihaoyi" %% "cask" % "0.7.3",
+scalaVersion := "2.12.2"
+libraryDependencies ++= Seq("com.lihaoyi" %% "cask" % "0.2.9",
   "com.lihaoyi" %% "utest" % "0.7.4" % Test,
   "com.lihaoyi" %% "requests" % "0.5.1",
   "org.postgresql" % "postgresql" % "42.2.8",
@@ -13,5 +13,4 @@ libraryDependencies ++= Seq("com.lihaoyi" %% "cask" % "0.7.3",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2",
   "com.typesafe" % "config" % "1.4.0")
 
-val stage = taskKey[Unit]("Stage task")
-val Stage = config("stage")
+//libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.12.2"
