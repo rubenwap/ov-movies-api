@@ -29,30 +29,8 @@ object moviescrape extends cask.MainRoutes with LazyLogging {
   lazy val ctx =
     new PostgresJdbcContext(LowerCase, new HikariDataSource(hikariConfig))
   import ctx._
-  @cask.get("/movies")
-  def getMovies(): cask.Response[String] = {
 
-    val content = ctx
-      .run(query[Movies])
-      .map(m => {
-        ujson.Obj(
-          "cinema" -> ujson.Str(m.cinema),
-          "details" -> ujson.Str(m.details),
-          "title" -> ujson.Str(m.title),
-          "datetime" -> ujson.Str(m.datetime.getOrElse("No Date").toString)
-        )
-      })
-    val resp = upickle.default.write(ujson.Obj("data" -> content))
-    new cask.Response(
-      data = resp,
-      statusCode = 200,
-      headers = List(("content-type", "application/json")),
-      cookies = List()
-    )
-
-  }
-
-  @cask.get("/movies/upcoming")
+  @cask.get("/movies/today")
   def getMoviesToday(): cask.Response[String] = {
 
     val content = ctx
