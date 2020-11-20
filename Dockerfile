@@ -14,7 +14,7 @@ WORKDIR /opt/vosmovies_api
 ADD . /opt/vosmovies_api
 CMD sbt assembly
 
-FROM openjdk:8
+FROM openjdk:8-alpine
 
 EXPOSE 8081
 WORKDIR /opt/vosmovies_api
