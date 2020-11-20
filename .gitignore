@@ -10,4 +10,5 @@ application.properties
 .vscode
 .bloop
 .metals
+docker-entrypoint.sh
 
